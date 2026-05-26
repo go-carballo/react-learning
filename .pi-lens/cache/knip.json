@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "issues": [
+    {
+      "type": "file",
+      "name": "1-js-basics/fakeApi.js",
+      "file": "1-js-basics/fakeApi.js"
+    },
+    {
+      "type": "file",
+      "name": "1-js-basics/users.js",
+      "file": "1-js-basics/users.js"
+    },
+    {
+      "type": "file",
+      "name": "src/Cart.jsx",
+      "file": "src/Cart.jsx"
+    },
+    {
+      "type": "file",
+      "name": "src/ProductList.jsx",
+      "file": "src/ProductList.jsx"
+    },
+    {
+      "type": "file",
+      "name": "src/UserContext.jsx",
+      "file": "src/UserContext.jsx"
+    },
+    {
+      "type": "file",
+      "name": "src/UserProfile.jsx",
+      "file": "src/UserProfile.jsx"
+    }
+  ],
+  "unusedExports": [],
+  "unusedFiles": [
+    {
+      "type": "file",
+      "name": "1-js-basics/fakeApi.js",
+      "file": "1-js-basics/fakeApi.js"
+    },
+    {
+      "type": "file",
+      "name": "1-js-basics/users.js",
+      "file": "1-js-basics/users.js"
+    },
+    {
+      "type": "file",
+      "name": "src/Cart.jsx",
+      "file": "src/Cart.jsx"
+    },
+    {
+      "type": "file",
+      "name": "src/ProductList.jsx",
+      "file": "src/ProductList.jsx"
+    },
+    {
+      "type": "file",
+      "name": "src/UserContext.jsx",
+      "file": "src/UserContext.jsx"
+    },
+    {
+      "type": "file",
+      "name": "src/UserProfile.jsx",
+      "file": "src/UserProfile.jsx"
+    }
+  ],
+  "unusedDeps": [],
+  "unlistedDeps": [],
+  "summary": "Found 6 issues"
+}
