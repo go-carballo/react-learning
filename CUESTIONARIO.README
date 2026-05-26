@@ -1,0 +1,146 @@
+# Cuestionario React Learning
+
+## 1. JavaScript básico
+
+### 1. ¿Qué hace una `Promise`?
+**Respuesta:** Representa una operación asincrónica que puede terminar bien con `resolve` o fallar con `reject`.
+
+### 2. ¿Para qué usamos `async/await`?
+**Respuesta:** Para escribir código asincrónico de forma más legible, esperando el resultado de una `Promise`.
+
+### 3. En el `fakeApi.js`, ¿qué simulaba `setTimeout`?
+**Respuesta:** Simulaba la demora de una API real antes de devolver datos.
+
+---
+
+## 2. React basics
+
+### 4. ¿Para qué sirve `useState`?
+**Respuesta:** Sirve para guardar estado dentro de un componente React y volver a renderizar la UI cuando ese estado cambia.
+
+### 5. En el contador, ¿qué hacía `setCount(count => count + 1)`?
+**Respuesta:** Actualizaba el contador usando el valor anterior y sumándole 1.
+
+### 6. ¿Por qué el input de tareas era “controlado”?
+**Respuesta:** Porque su valor venía del estado de React y se actualizaba con `onChange`.
+
+### 7. ¿Para qué usamos `.map()` en la lista de tareas?
+**Respuesta:** Para transformar el array de tareas en elementos JSX renderizados en pantalla.
+
+### 8. ¿Cómo borrábamos una tarea?
+**Respuesta:** Usando `.filter()` para crear un nuevo array sin la tarea seleccionada.
+
+---
+
+## 3. Formularios
+
+### 9. ¿Por qué usamos `event.preventDefault()`?
+**Respuesta:** Para evitar que el formulario recargue la página al enviarse.
+
+### 10. ¿Cómo manejamos varios inputs con una sola función?
+**Respuesta:** Usando el atributo `name` del input y actualizando el estado con `[name]: value`.
+
+### 11. ¿Dónde guardábamos los datos enviados del formulario?
+**Respuesta:** En un estado separado, por ejemplo `submittedData`.
+
+---
+
+## 4. Consumo de APIs
+
+### 12. ¿Para qué usamos `useEffect` al pedir posts?
+**Respuesta:** Para ejecutar el pedido a la API cuando el componente se monta.
+
+### 13. ¿Qué estados usamos para consumir una API?
+**Respuesta:** `posts`, `isLoading` y `error`.
+
+### 14. ¿Qué significa `response.ok`?
+**Respuesta:** Indica si la respuesta HTTP fue exitosa, por ejemplo status `200`.
+
+### 15. ¿Cómo mostramos un error si falla la API?
+**Respuesta:** Guardando el mensaje en un estado `error` y renderizándolo condicionalmente.
+
+### 16. En el detalle de un post, ¿qué guardábamos en `selectedPost`?
+**Respuesta:** El post que el usuario clickeó.
+
+### 17. En el POST falso, ¿qué método usamos?
+**Respuesta:** `method: "POST"`.
+
+### 18. ¿Para qué usamos `JSON.stringify()`?
+**Respuesta:** Para convertir un objeto JavaScript en texto JSON antes de mandarlo en el `body`.
+
+---
+
+## 5. Manejo de estado
+
+### 19. En el carrito, ¿dónde vivía el estado?
+**Respuesta:** En `App`.
+
+### 20. ¿Por qué el total no se guardaba en estado?
+**Respuesta:** Porque es información derivada del carrito. Se calcula con `.reduce()`.
+
+### 21. ¿Para qué separamos `ProductList` y `Cart`?
+**Respuesta:** Para dividir responsabilidades y practicar props entre componentes.
+
+### 22. ¿Qué props recibía `ProductList`?
+**Respuesta:** `products` y `onAddToCart`.
+
+### 23. ¿Qué props recibía `Cart`?
+**Respuesta:** `cart`, `total` y `onRemoveFromCart`.
+
+### 24. ¿Qué problema resuelve Context?
+**Respuesta:** Evita pasar props manualmente por muchos niveles cuando varios componentes necesitan la misma información.
+
+### 25. ¿Qué simulaba `UserContext`?
+**Respuesta:** Un usuario logueado disponible para componentes dentro del `Provider`.
+
+---
+
+## 6. Comunicación con backend
+
+### 26. ¿Qué simulaba el login?
+**Respuesta:** Una respuesta de backend con un token y datos del usuario.
+
+```js
+{
+  accessValue: "valor-de-sesion-de-ejemplo",
+  user: {
+    id: 1,
+    name: "Ada"
+  }
+}
+```
+
+### 27. ¿Dónde guardábamos el token?
+**Respuesta:** En un estado llamado `token`.
+
+### 28. ¿Cómo se manda un token en una request?
+**Respuesta:** Usando el header `Authorization`.
+
+```js
+Authorization: `Bearer ${token}`
+```
+
+### 29. ¿Qué significa “Bearer token”?
+**Respuesta:** Es una forma común de enviar un token de sesión/autenticación al backend.
+
+### 30. ¿Qué errores simulamos del backend?
+**Respuesta:** `Email requerido`, `Password incorrecto` y `Sesión expirada`.
+
+### 31. ¿Por qué usamos `try/catch`?
+**Respuesta:** Para capturar errores de operaciones asincrónicas, como login o requests.
+
+### 32. ¿Qué hacía `fakePrivateRequest`?
+**Respuesta:** Simulaba una request protegida que necesitaba un token válido.
+
+---
+
+## Preguntas integradoras
+
+### 33. ¿Cuál es la diferencia entre estado local y Context?
+**Respuesta:** El estado local vive en un componente específico. Context permite compartir datos con varios componentes sin pasar props manualmente.
+
+### 34. ¿Cuándo conviene levantar estado a `App`?
+**Respuesta:** Cuando varios componentes necesitan leer o modificar la misma información.
+
+### 35. ¿Qué aprendimos con estos ejercicios?
+**Respuesta:** Aprendimos a manejar estado con `useState`, renderizar listas, controlar formularios, consumir APIs, manejar loading y errores, enviar datos con `POST`, pasar props entre componentes, usar Context y simular login, token y errores de backend.
